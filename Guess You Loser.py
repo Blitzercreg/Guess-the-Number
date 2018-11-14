@@ -1,6 +1,5 @@
 # This is a number guessing game made for Python 3
 
-import os
 import random
 number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 a = random.choice(number_list)
