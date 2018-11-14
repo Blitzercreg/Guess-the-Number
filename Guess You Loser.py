@@ -27,4 +27,4 @@ while True:
     elif restart != 'n' or 'y':
       print('Thats not even an option I gave you!')
   except:
-    print('e') # I am not sure how to get the 'except' function to go through
+    pass # I figured out you can bypass the exception with just a simple pass statement
