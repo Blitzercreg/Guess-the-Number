@@ -1,10 +1,13 @@
 # This is a number guessing game made for Python 3
+# version 1.04
 def answer():
-  restart = input('Would you like to try again stupid? Type Y for Yes or N for No\n')
+  restart = input('\nWould you like to try again stupid? Type Y for Yes or N for No\n')
   if restart == 'y':
+    print('\n')
     start()
   elif restart == 'n':
     print('Loser')
+    quit()
   elif restart != 'n' or 'y':
     print('Thats not even an option I gave you!')
     answer()
@@ -18,11 +21,14 @@ def start():
 
   guess = input()
 
-  if int(guess) == a:
-    print('NO! Haha you dummy, you said it was', guess, 'when really it was...\n', a)
-  elif int(guess) != a:
-    print('Wrong you piece of garbage!')
-    print('It was', a)
+  try:
+    if int(guess) == a:
+      print('NO! Haha you dummy, you said it was', guess, 'when really it was...\n', a)
+    elif int(guess) != a:
+      print('Wrong you piece of garbage!')
+      print('It was', a)
+  except ValueError:
+      print('That is not even a number you disgusting hippopotamus!')
   answer()
 
 def banner(message, border='~'):
