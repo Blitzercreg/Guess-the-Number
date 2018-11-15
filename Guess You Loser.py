@@ -1,5 +1,8 @@
 # This is a number guessing game made for Python 3
-# version 1.04
+# Version 1.05
+
+import random
+
 def answer():
   restart = input('\nWould you like to try again stupid? Type Y for Yes or N for No\n')
   if restart == 'y':
@@ -13,7 +16,6 @@ def answer():
     answer()
 
 def start():
-  import random
   number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   a = random.choice(number_list)
 
