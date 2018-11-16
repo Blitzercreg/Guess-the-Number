@@ -1,5 +1,5 @@
 # This is a number guessing game made for Python 3
-# Version 1.05
+# Version 1.06
 
 import random
 
@@ -25,10 +25,10 @@ def start():
 
   try:
     if int(guess) == a:
-      print('NO! Haha you dummy, you said it was', guess, 'when really it was...\n', a)
+      print('NO! Haha you dummy, you said it was', guess, 'when really it was...\n', a, end=""'...Lucky guess I suppose...\n')
     elif int(guess) != a:
       print('Wrong you piece of garbage!')
-      print('It was', a)
+      print('It was', a, end=""'!')
   except ValueError:
       print('That is not even a number you disgusting hippopotamus!')
   answer()
